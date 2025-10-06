@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NÓRDICA DECO | Deco cálida y minimalista</title>
+  <meta name="description" content="Deco nórdica cálida, muebles y accesorios en tonos neutros. Inspirate con piezas naturales y texturas suaves.">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#inicio" class="logo">
+      <img src="img/icono-olas.png" alt="Logo Nórdica Deco" class="logo-icon">
+      <span class="logo-nordica">NÓRDICA</span> <span class="logo-deco">DECO</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo se muestra en móvil) -->
+    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú" aria-controls="primary-nav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+  
+    <nav class="nav" id="primary-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('primary-nav');
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open', !open);
+  });
+
+  // Cierra el menú al hacer click en un link
+  nav.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => {
+      btn.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+    })
+  );
+</script>
+
+ 
+  <main>
+    
+    <section id="inicio" class="section hero">
+      <div class="hero-texto">
+        <h1>Deco cálida para espacios reales</h1>
+        <p>Texturas naturales, colores neutros y materiales nobles para que tu casa se sienta como hogar. Piezas simples, funcionales y atemporales.</p>
+        <a href="#productos" class="btn">Ver productos</a>
+      </div>
+
+      <div class="hero-img">
+        <img src="img/deco-calida.jpg" alt="Ambiente cálido con decoración nórdica">
+      </div>
+    </section>
+
+    <section id="nosotros" class="section bloque-nosotros">
+      <div class="container historia-grid">
+        <div class="historia-text">
+          <h2>Nosotros</h2>
+          <p>
+            Hola, soy <strong>Milagros</strong>. Todo comenzó cuando leí un libro en la secundaria
+            que despertó en mí unas enormes ganas de conocer Copenhague. Años después,
+            tuve la oportunidad de viajar en un intercambio estudiantil con amigas y quedé completamente
+            fascinada con su cultura, su diseño y la calidez de su gente.
+          </p>
+          <p>
+            Esa experiencia fue el punto de partida de <strong>NÓRDICA DECO</strong>:
+            un espacio donde busco transmitir esa calidez escandinava acá en Argentina,
+            con <strong>diseños simples, estéticos y accesibles</strong>. Este proyecto
+            nace de mi fuego interior, de esa pasión por combinar el diseño, la estética
+            y la decoración en piezas que hagan sentir el hogar.
+          </p>
+        </div>
+
+        <figure class="historia-img">
+          <img src="img/nuestra-historia.jpg" alt="Milagros en Copenhague" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    
+   <section id="productos" class="section bloque-productos">
+  <div class="container">
+    <h2>Productos destacados</h2>
+    <div class="grid-cards">
+      <div class="card">
+        <img src="img/FLORERO POP AMARILLO 18X18X23 CM.jpg" alt="Florero cerámica beige">
+        <h3>Florero Pop Amarillo</h3>
+        <p>Diseño de líneas suaves y acabado artesanal, ideal para flores secas o frescas.</p>
+      </div>
+
+      <div class="card">
+        <img src="img/LAMPARA ESTIRON.webp" alt="Lámpara minimalista beige">
+        <h3>Lámpara Estiron</h3>
+        <p>Luz cálida con base en cerámica mate, perfecta para mesas auxiliares o escritorios.</p>
+      </div>
+
+      <div class="card">
+        <img src="img/BOWLS MAMUSHKA.webp" alt="Bowl decorativo">
+        <h3>Bowls Mamushka</h3>
+        <p>Set de cerámica esmaltada en tonos neutros. Ideal para cocina o deco de mesa.</p>
+      </div>
+
+     
+      <div class="card">
+        <img src="img/SERVILLETAS DE LINO.webp" alt="Servilletas de lino natural">
+        <h3>Servilletas de lino</h3>
+        <p>Set de servilletas de lino natural, suaves y duraderas, ideales para mesas cálidas y minimalistas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+       
+    
+    <section id="contacto" class="section bloque-contacto contacto">
+      <div class="container contacto-grid">
+        <div class="contacto-info">
+          <h2>Ubicación & contacto</h2>
+          <ul class="contacto-lista">
+            <li><span>Dirección:</span> Local 10, Galería Distrito Arcos, CABA</li>
+            <li><span>Tel:</span> <a href="tel:+54 9 11 4067-6789">+54 9 11 4067-6789</a></li>
+            <li><span>Email:</span> <a href="mailto:contacto@nordicadeco.com">contacto@nordicadeco.com</a></li>
+            <li><span>IG:</span> <a href="https://instagram.com/nordicadeco" target="_blank" rel="noopener">@nordicadeco</a></li>
+            <li><span>Horarios:</span> Lun a Sáb, 11 a 19 h</li>
+          </ul>
+        </div>
+
+        <div class="contacto-mapa">
+        
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6382.990820036638!2d-58.42704519138559!3d-34.57852897995554!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aabcb7b7fd341%3A0xd4d803156d38286c!2sDistrito%20Arcos%20Premium%20Outlet!5e0!3m2!1ses!2sus!4v1759715374911!5m2!1ses!2sus"
+            width="300" height="250" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <small>© 2025 NÓRDICA DECO — Diseño cálido y funcional</small>
+  </footer>
+</body>
+</html>
+
+
+
+
+
